@@ -1,0 +1,8 @@
+{% extends 'gear/base.html' %}
+{% block content %}
+  <div>
+    <h5>{{ item.item_info }}</h5>
+    <p>Weight (oz): <a>{{item.weight_oz}}</a></p>
+    <a href="{% url 'gear:gear_edit' item.id %}"><button>Edit</button></a>
+  </div>
+{% endblock %}

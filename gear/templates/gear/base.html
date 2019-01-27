@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head<>
+    <title>Gearlist</title>
+  </head>
+  <body>
+    <div>
+      <h1><a href='/'>Gearlist</a></h1>
+      <p>There are {{count}} items in your gearlist.</p>
+    </div>
+    <div>
+      <div>
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

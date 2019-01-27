@@ -1,0 +1,12 @@
+{% extends 'gear/base.html' %}
+{% block content %}
+  <div>
+    <ul>
+      {% for item in items %}
+      <div>
+          <li><a href="{% url 'gear:gear_detail' item.id %}">{{ item.item_info }}</a></li>
+      </div>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
