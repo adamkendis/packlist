@@ -1,0 +1,16 @@
+{% extends gear/base.html %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block inner %}
+  <div id='react'>
+    <i class="fa fa-lg fa-spinner fa-spin"></i><br><br>
+    <i class="pending">Loading...</i><br><br>
+  </div>
+
+  <script>
+    <!-- NOTE: escape props to prevent XSS -->
+    window.props = {{props}};
+    window.react_mount = document.getElementById('app');
+  </script>
+  <script src="../static/components/{{component}}"></script>
