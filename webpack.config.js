@@ -5,7 +5,7 @@ var BundleTracker = require('webpack-bundle-tracker');
 module.exports = {
   context: __dirname,
 
-  entry: './gear/static/components/index',
+  entry: './gear/static/index.js',
 
   output: {
       path: path.resolve('./gear/static/bundles/'),
@@ -13,12 +13,12 @@ module.exports = {
   },
 
   plugins: [
-    new BundleTracker({filename: './gear/webpack-stats.json'}),
+    new BundleTracker({filename: 'webpack-stats.json'}),
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       }
