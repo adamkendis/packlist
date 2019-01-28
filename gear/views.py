@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Item
 from .forms import ItemForm
 
-# Create your views here.
-
 def gear_list(request):
 	items = Item.objects.all().order_by('weight_oz')
 	return render(request, 'gear/gear_list.html', {'items': items, 'count': items.count()})
@@ -11,7 +9,6 @@ def gear_list(request):
 def gear_detail(request, pk):
 	item = get_object_or_404(Item, pk=pk)
 	return render(request, 'gear/gear_detail.html', {'item': item})
-
 
 def gear_delete(request, pk):
 	item = get_object_or_404(Item, pk=pk)
