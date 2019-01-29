@@ -1,4 +1,4 @@
-{% extends gear/base.html %}
+{% extends 'gear/base.html' %}
 
 {% block title %}{{title}}{% endblock %}
 
@@ -9,7 +9,8 @@
   </div>
 
   <script>
-    window.props = {{props}};
+    window.props = {{ props }};
     window.react_mount = document.getElementById('app');
   </script>
   <script src="../static/components/{{component}}"></script>
+  {% endblock %}

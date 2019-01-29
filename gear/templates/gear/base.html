@@ -19,5 +19,8 @@
       <div id='app'></div>
       {% render_bundle 'main' %}
     </div>
+    <script>
+      window.props = {{ props|safe }};
+    </script>
   </body>
 </html>
